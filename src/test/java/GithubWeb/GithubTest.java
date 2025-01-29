@@ -17,8 +17,12 @@ public class GithubTest extends BaseClass {
         } catch (InterruptedException e) {
             e.printStackTrace(); // Print error (optional)
         }
-
         login.clickOnSignInBtn();
+        try {
+            Thread.sleep(3000); // Wait for 3 seconds
+        } catch (InterruptedException e) {
+            e.printStackTrace(); // Print error (optional)
+        }
         login.checkTerms();
         login.checkPrivacy();
     }
